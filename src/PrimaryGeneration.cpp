@@ -17,7 +17,12 @@
 #include <G4Electron.hh>
 #include <G4MuonPlus.hh>
 #include <G4Proton.hh>
+<<<<<<< HEAD
+#include <iostream>
+#include <fstream>
+=======
 
+>>>>>>> c6b72b01572de40cb1f36da53a0fdff19c790953
 #include <G4GenericMessenger.hh>
 #include <Randomize.hh>
 
@@ -32,6 +37,11 @@
 #include "G4ParticleTable.hh"
 #include "G4PhysicalConstants.hh"
 
+<<<<<<< HEAD
+using namespace std;
+
+=======
+>>>>>>> c6b72b01572de40cb1f36da53a0fdff19c790953
 
 PrimaryGeneration::PrimaryGeneration():
   G4VUserPrimaryGeneratorAction()
@@ -146,6 +156,15 @@ void PrimaryGeneration::GeneratePrimaries(G4Event* event)
       // Do this by first setting the PDG code and the 4-momentum components.
       G4PrimaryParticle* particle = new G4PrimaryParticle( fp->pdg_code(),
         fp->px(), fp->py(), fp->pz(), fp->total_energy() );
+<<<<<<< HEAD
+	
+	// Write the MARLEY output to a file
+	ofstream marleyoutput;
+	marleyoutput.open("/n/home11/ntata/projects/Q_PIX_GEANT4/build/marley_out.txt",ios::app);
+	marleyoutput << fp->pdg_code() << "\n";
+	marleyoutput.close();
+=======
+>>>>>>> c6b72b01572de40cb1f36da53a0fdff19c790953
 
       // Also set the charge of the G4PrimaryParticle appropriately
       particle->SetCharge( fp->charge() );
