@@ -12,6 +12,7 @@ SET(SRC   DetectorConstruction.cpp
           RunAction.cpp
           SteppingAction.cpp
           TrackingSD.cpp
-          TrackingHit.cpp)
+          TrackingAction.cxx
+	  TrackingHit.cpp)
 
 add_library(${CMAKE_PROJECT_NAME} OBJECT ${SRC})

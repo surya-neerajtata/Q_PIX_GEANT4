@@ -4,6 +4,7 @@
 app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: ../src/DetectorConstruction.h
 app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: ../src/PrimaryGeneration.h
 app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: ../src/SteppingAction.h
+app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: ../src/TrackingAction.h
 app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: /n/home11/ntata/geant4-10.6.2/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: /n/home11/ntata/geant4-10.6.2/include/Geant4/CLHEP/Geometry/Normal3D.h
 app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o: /n/home11/ntata/geant4-10.6.2/include/Geant4/CLHEP/Geometry/Plane3D.h

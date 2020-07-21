@@ -10,7 +10,7 @@
 #include "PrimaryGeneration.h"
 #include "SteppingAction.h"
 #include "TrackingAction.h"
-=======
+
 
 #include <G4RunManager.hh>
 #include <G4UImanager.hh>
@@ -57,7 +57,6 @@ int main(int argc, char** argv)
 
   runmgr->SetUserAction(new TrackingAction());
 
-=======
   // Initialize visualization
   G4VisManager* vismgr = new G4VisExecutive();
   vismgr->Initialize();

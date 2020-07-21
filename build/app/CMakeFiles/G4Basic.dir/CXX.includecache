@@ -22,6 +22,10 @@ marley/Generator.hh
 G4UserSteppingAction.hh
 -
 
+../src/TrackingAction.h
+G4UserTrackingAction.hh
+../src/G4UserTrackingAction.hh
+
 /n/home11/ntata/geant4-10.6.2/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 iosfwd
 -
