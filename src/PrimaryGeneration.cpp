@@ -17,12 +17,11 @@
 #include <G4Electron.hh>
 #include <G4MuonPlus.hh>
 #include <G4Proton.hh>
-<<<<<<< HEAD
+
 #include <iostream>
 #include <fstream>
 =======
 
->>>>>>> c6b72b01572de40cb1f36da53a0fdff19c790953
 #include <G4GenericMessenger.hh>
 #include <Randomize.hh>
 
