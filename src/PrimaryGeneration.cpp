@@ -20,7 +20,6 @@
 
 #include <iostream>
 #include <fstream>
-=======
 
 #include <G4GenericMessenger.hh>
 #include <Randomize.hh>
@@ -38,7 +37,6 @@
 
 using namespace std;
 
-=======
 
 PrimaryGeneration::PrimaryGeneration():
   G4VUserPrimaryGeneratorAction()
@@ -160,7 +158,7 @@ void PrimaryGeneration::GeneratePrimaries(G4Event* event)
 	marleyoutput.open("/n/home11/ntata/projects/Q_PIX_GEANT4/build/marley_out.txt",ios::app);
 	marleyoutput << fp->pdg_code() << "\n";
 	marleyoutput.close();
-=======
+
 
 
       // Also set the charge of the G4PrimaryParticle appropriately

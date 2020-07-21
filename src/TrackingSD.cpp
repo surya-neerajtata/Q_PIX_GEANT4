@@ -15,8 +15,6 @@
 
 #include <vector>
 #include "G4VProcess.hh"
-=======
-
 
 
 TrackingSD::TrackingSD(const G4String& sd_name, const G4String& hc_name):
@@ -70,7 +68,6 @@ G4bool TrackingSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
   Tmp_Vector.push_back(edep);
 
   Tmp_Vector.push_back(aStep->GetPostStepPoint()->GetGlobalTime());
-=======
 
 
   Event_Vector.push_back(Tmp_Vector);
@@ -86,8 +83,6 @@ G4bool TrackingSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
     aStep->GetTrack()->GetParentID()            <<"\t"<<
     aStep->GetTrack()->GetDynamicParticle()->GetPDGcode() <<"\t"<<
     aStep->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName() <<"\t"<<  std::endl;
-=======
-    aStep->GetTotalEnergyDeposit()              <<"\t"<< std::endl;
 
   //G4cout << G4endl << "Austin " << aStep->GetPostStepPoint()->GetPosition() << G4endl;
 
@@ -125,6 +120,4 @@ void TrackingSD::OpenFile(G4String filename)
   Data_File.open(filename);
   //Data_File << "EventID" <<"\t"<< "xpos" <<"\t"<< "ypos" <<"\t"<< "zpos" <<"\t"<< "hitE" <<"\t"<< "stepL" << std::endl;
 
-}
-=======
 }
