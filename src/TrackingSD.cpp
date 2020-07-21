@@ -1,3 +1,4 @@
+
 // -----------------------------------------------------------------------------
 //  G4Basic | TrackingSD.cpp
 //
@@ -13,6 +14,9 @@
 #include <G4SystemOfUnits.hh>
 
 #include <vector>
+#include "G4VProcess.hh"
+=======
+
 
 
 TrackingSD::TrackingSD(const G4String& sd_name, const G4String& hc_name):
@@ -65,13 +69,26 @@ G4bool TrackingSD::ProcessHits(G4Step* aStep, G4TouchableHistory*)
   Tmp_Vector.push_back(aStep->GetPostStepPoint()->GetPosition()[2] + (5.0/2)*m);
   Tmp_Vector.push_back(edep);
 
+  Tmp_Vector.push_back(aStep->GetPostStepPoint()->GetGlobalTime());
+=======
+
+
   Event_Vector.push_back(Tmp_Vector);
   Tmp_Vector.clear();
-  Data_File <<  Acounter  <<"\t"<< 
-    aStep->GetPostStepPoint()->GetPosition()[0] + (1.0/2)*m <<"\t"<< 
+  Data_File <<  Acounter  <<"\t"<<
+    aStep->GetPostStepPoint()->GetPosition()[0] + (1.0/2)*m <<"\t"<<
     aStep->GetPostStepPoint()->GetPosition()[1] + (1.0/2)*m <<"\t"<<
-    aStep->GetPostStepPoint()->GetPosition()[2] + (5.0/2)*m <<"\t"<< 
+    aStep->GetPostStepPoint()->GetPosition()[2] + (5.0/2)*m <<"\t"<<
+
+    aStep->GetTotalEnergyDeposit()              <<"\t"<<
+    aStep->GetPostStepPoint()->GetGlobalTime()  <<"\t"<<
+    aStep->GetTrack()->GetTrackID()             <<"\t"<<
+    aStep->GetTrack()->GetParentID()            <<"\t"<<
+    aStep->GetTrack()->GetDynamicParticle()->GetPDGcode() <<"\t"<<
+    aStep->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName() <<"\t"<<  std::endl;
+=======
     aStep->GetTotalEnergyDeposit()              <<"\t"<< std::endl;
+
   //G4cout << G4endl << "Austin " << aStep->GetPostStepPoint()->GetPosition() << G4endl;
 
   return true;
@@ -85,19 +102,19 @@ void TrackingSD::EndOfEvent(G4HCofThisEvent*)
     << G4endl
     << "-------->Hits Collection: in this event there are " << nofHits
     << " hits in the tracker." << G4endl;
-    
+
 
     G4cout<< Acounter << G4endl;
     Acounter +=1;
 
-  for (int i = 0; i < nofHits; i++) 
-  { 
+  for (int i = 0; i < nofHits; i++)
+  {
     //G4cout<< Event_Vector.at(i)<< " ";
     for (int j = 0; j < 4; j++)
-    { 
-      G4cout<< Event_Vector[i][j]<< " "; 
-    } 
-    G4cout<< "\n"; 
+    {
+      G4cout<< Event_Vector[i][j]<< " ";
+    }
+    G4cout<< "\n";
   }
 
 }
@@ -107,4 +124,7 @@ void TrackingSD::OpenFile(G4String filename)
 {
   Data_File.open(filename);
   //Data_File << "EventID" <<"\t"<< "xpos" <<"\t"<< "ypos" <<"\t"<< "zpos" <<"\t"<< "hitE" <<"\t"<< "stepL" << std::endl;
+
+}
+=======
 }
