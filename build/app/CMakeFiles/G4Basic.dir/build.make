@@ -102,6 +102,7 @@ G4Basic_EXTERNAL_OBJECTS = \
 "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/RunAction.cpp.o" \
 "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/SteppingAction.cpp.o" \
 "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/TrackingSD.cpp.o" \
+"/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o" \
 "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o"
 
 app/G4Basic: app/CMakeFiles/G4Basic.dir/G4Basic.cpp.o
@@ -111,6 +112,7 @@ app/G4Basic: src/CMakeFiles/G4BASIC.dir/PrimaryGeneration.cpp.o
 app/G4Basic: src/CMakeFiles/G4BASIC.dir/RunAction.cpp.o
 app/G4Basic: src/CMakeFiles/G4BASIC.dir/SteppingAction.cpp.o
 app/G4Basic: src/CMakeFiles/G4BASIC.dir/TrackingSD.cpp.o
+app/G4Basic: src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o
 app/G4Basic: src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o
 app/G4Basic: app/CMakeFiles/G4Basic.dir/build.make
 app/G4Basic: /n/home11/ntata/geant4-10.6.2/lib64/libG4Tree.so

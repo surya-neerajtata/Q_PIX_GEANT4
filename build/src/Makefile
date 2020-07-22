@@ -326,6 +326,33 @@ SteppingAction.cpp.s:
 	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/G4BASIC.dir/build.make src/CMakeFiles/G4BASIC.dir/SteppingAction.cpp.s
 .PHONY : SteppingAction.cpp.s
 
+TrackingAction.o: TrackingAction.cxx.o
+
+.PHONY : TrackingAction.o
+
+# target to build an object file
+TrackingAction.cxx.o:
+	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/G4BASIC.dir/build.make src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o
+.PHONY : TrackingAction.cxx.o
+
+TrackingAction.i: TrackingAction.cxx.i
+
+.PHONY : TrackingAction.i
+
+# target to preprocess a source file
+TrackingAction.cxx.i:
+	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/G4BASIC.dir/build.make src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.i
+.PHONY : TrackingAction.cxx.i
+
+TrackingAction.s: TrackingAction.cxx.s
+
+.PHONY : TrackingAction.s
+
+# target to generate assembly for a file
+TrackingAction.cxx.s:
+	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/G4BASIC.dir/build.make src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.s
+.PHONY : TrackingAction.cxx.s
+
 TrackingHit.o: TrackingHit.cpp.o
 
 .PHONY : TrackingHit.o
@@ -408,6 +435,9 @@ help:
 	@echo "... SteppingAction.o"
 	@echo "... SteppingAction.i"
 	@echo "... SteppingAction.s"
+	@echo "... TrackingAction.o"
+	@echo "... TrackingAction.i"
+	@echo "... TrackingAction.s"
 	@echo "... TrackingHit.o"
 	@echo "... TrackingHit.i"
 	@echo "... TrackingHit.s"

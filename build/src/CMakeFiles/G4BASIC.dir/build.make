@@ -155,9 +155,22 @@ src/CMakeFiles/G4BASIC.dir/TrackingSD.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G4BASIC.dir/TrackingSD.cpp.s"
 	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build/src && /n/helmod/apps/centos7/Core/gcc/9.3.0-fasrc01/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingSD.cpp -o CMakeFiles/G4BASIC.dir/TrackingSD.cpp.s
 
+src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o: src/CMakeFiles/G4BASIC.dir/flags.make
+src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o: ../src/TrackingAction.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/n/home11/ntata/projects/Q_PIX_GEANT4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o"
+	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build/src && /n/helmod/apps/centos7/Core/gcc/9.3.0-fasrc01/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o -c /n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingAction.cxx
+
+src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/G4BASIC.dir/TrackingAction.cxx.i"
+	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build/src && /n/helmod/apps/centos7/Core/gcc/9.3.0-fasrc01/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingAction.cxx > CMakeFiles/G4BASIC.dir/TrackingAction.cxx.i
+
+src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G4BASIC.dir/TrackingAction.cxx.s"
+	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build/src && /n/helmod/apps/centos7/Core/gcc/9.3.0-fasrc01/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingAction.cxx -o CMakeFiles/G4BASIC.dir/TrackingAction.cxx.s
+
 src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o: src/CMakeFiles/G4BASIC.dir/flags.make
 src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o: ../src/TrackingHit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/n/home11/ntata/projects/Q_PIX_GEANT4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/n/home11/ntata/projects/Q_PIX_GEANT4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o"
 	cd /n/home11/ntata/projects/Q_PIX_GEANT4/build/src && /n/helmod/apps/centos7/Core/gcc/9.3.0-fasrc01/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o -c /n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingHit.cpp
 
 src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.i: cmake_force
@@ -174,6 +187,7 @@ G4BASIC: src/CMakeFiles/G4BASIC.dir/PrimaryGeneration.cpp.o
 G4BASIC: src/CMakeFiles/G4BASIC.dir/RunAction.cpp.o
 G4BASIC: src/CMakeFiles/G4BASIC.dir/SteppingAction.cpp.o
 G4BASIC: src/CMakeFiles/G4BASIC.dir/TrackingSD.cpp.o
+G4BASIC: src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o
 G4BASIC: src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o
 G4BASIC: src/CMakeFiles/G4BASIC.dir/build.make
 

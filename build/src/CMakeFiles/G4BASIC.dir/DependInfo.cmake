@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/n/home11/ntata/projects/Q_PIX_GEANT4/src/PrimaryGeneration.cpp" "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/PrimaryGeneration.cpp.o"
   "/n/home11/ntata/projects/Q_PIX_GEANT4/src/RunAction.cpp" "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/RunAction.cpp.o"
   "/n/home11/ntata/projects/Q_PIX_GEANT4/src/SteppingAction.cpp" "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/SteppingAction.cpp.o"
+  "/n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingAction.cxx" "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/TrackingAction.cxx.o"
   "/n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingHit.cpp" "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/TrackingHit.cpp.o"
   "/n/home11/ntata/projects/Q_PIX_GEANT4/src/TrackingSD.cpp" "/n/home11/ntata/projects/Q_PIX_GEANT4/build/src/CMakeFiles/G4BASIC.dir/TrackingSD.cpp.o"
   )
