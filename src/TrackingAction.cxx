@@ -27,7 +27,9 @@ void TrackingAction::PostUserTrackingAction(const G4Track* track)
     const G4int pdgCode = particleDefinition->GetPDGEncoding();
     const G4int trackID = track->GetTrackID();
     const G4int parentID = track->GetParentID();
+    const G4double edep = track->GetTotalEnergy();
+    const G4double gtime = track->GetGlobalTime()
     const G4String process = track->GetStep()->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName();
-    myfile <<  trackID << " " << parentID << " " << pdgCode << " " << process << "\n";
+    myfile <<  edep << " " << gtime << " " << trackID << " " << parentID << " " << pdgCode << " " << process << "\n";
     myfile.close();
 }
