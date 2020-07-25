@@ -16,6 +16,7 @@ class G4GenericMessenger;
 
 // MARLEY includes
 #include "marley/Generator.hh"
+#include "G4ParticleTable.hh"
 
 class PrimaryGeneration: public G4VUserPrimaryGeneratorAction
 {
@@ -27,6 +28,8 @@ public:
   protected:
     // MARLEY event generator object
     marley::Generator marley_generator_;
+    // GEANT4 dictionary of particles
+    G4ParticleTable* particle_table_;
 
 private:
   G4GenericMessenger* msg_; // Messenger for configuration parameters
