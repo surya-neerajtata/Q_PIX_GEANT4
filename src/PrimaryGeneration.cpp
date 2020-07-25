@@ -32,7 +32,6 @@
 #include "marley/Particle.hh"
 #include "marley/JSONConfig.hh"
 
-#include "G4ParticleTable.hh"
 #include "G4PhysicalConstants.hh"
 
 using namespace std;
@@ -46,7 +45,8 @@ PrimaryGeneration::PrimaryGeneration():
   msg_->DeclareProperty("MARLEY_json", MARLEY_json_,  "marley json file?");
 
   //msg_->DeclareProperty("Particle_energy", Particle_Energy_,  "Energy of the particle.");
-
+  // get dictionary of particles
+  particle_table_ = G4ParticleTable::GetParticleTable();
 
 }
 
@@ -149,8 +149,51 @@ void PrimaryGeneration::GeneratePrimaries(G4Event* event)
     for ( const auto& fp : ev.get_final_particles() ) {
       // Convert each one from a marley::Particle into a G4PrimaryParticle.
       // Do this by first setting the PDG code and the 4-momentum components.
-      G4PrimaryParticle* particle = new G4PrimaryParticle( fp->pdg_code(),
-        fp->px(), fp->py(), fp->pz(), fp->total_energy() );
+	    
+	   // get dictionary of particles if necessary
+      if (particle_table_ == 0)
+      {
+        particle_table_ = G4ParticleTable::GetParticleTable();
+      }
+      // initialize particle definition
+      G4ParticleDefinition* pdef;
+      // get PDG code of marley::Particle
+      int const pdg_code = fp->pdg_code();
+      if (pdg_code == 0)
+      {
+        pdef = particle_table_->FindParticle("opticalphoton");
+      }
+      else
+      {
+        pdef = particle_table_->FindParticle(pdg_code);
+      }
+      // if the particle is a nucleus
+      if (pdg_code > 1000000000)
+      {
+        if (!pdef)
+        {
+          int const Z = (pdg_code % 10000000) / 10000; // atomic number
+          int const A = (pdg_code % 10000) / 10; // mass number
+          pdef = particle_table_->GetIonTable()->GetIon(Z, A, 0.);
+        }
+      } // if the particle is a nucleus
+      if (pdef == 0)
+      {
+        std::string message = "\nLine "
+                            + std::to_string(__LINE__)
+                            + " of file "
+                            + __FILE__
+                            + "\n\nUnknown PDG code: "
+                            + std::to_string(pdg_code)
+                            + "\n";
+        G4Exception("PrimaryGeneration::GeneratePrimaries", "Error",
+                    FatalException, message.c_str());
+      }
+      G4PrimaryParticle* particle = new G4PrimaryParticle(pdef,
+                                                          fp->px(),
+                                                          fp->py(),
+                                                          fp->pz(),
+							 fp->total_energy() );
 
 	
 	// Write the MARLEY output to a file
